@@ -1,0 +1,20 @@
+Package: dbhelpers
+Type: Package
+Title: Helper Functions for Common Database Operations
+Version: 0.1.0
+Author: 
+Maintainer:
+Description: Helper functions to assist with data extraction and processing.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    config,
+    dbplyr,
+    RPostgreSQL,
+    dplyr,
+    purrr,
+    pool,
+    magrittr,
+    rlang
+RoxygenNote: 7.1.0
