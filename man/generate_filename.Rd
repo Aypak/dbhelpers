@@ -31,12 +31,14 @@ generate_filename(
 }
 \value{
 A string containing the generated file name in the format:
-  reports_dir separator
-  device_name separator
-  report_name separator
-  module separator
+  reports_dir sep
+  device_name sep
+  report_name sep
+  module sep
   date
   extension
+
+  e.g ~/.reports/monthend_KRP_numeracy_06-20.csv
 }
 \description{
 Generate a file name for a report
