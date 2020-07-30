@@ -1,4 +1,4 @@
-#' Function to read files from a directory and bind them into a single \code{data.frame}
+#' Read files from a directory and bind them into a single \code{data.frame}
 #'
 #' @param file_directory Name or path to the directory containing files of interest
 #' @param file_pattern Regular expression to match the file names on. Default is "*.csv"
