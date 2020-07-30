@@ -2,7 +2,7 @@
 % Please edit documentation in R/lazy_conn_all_tables.R
 \name{lazy_conn_all_tables}
 \alias{lazy_conn_all_tables}
-\title{Create lazy connections to all tables in a schema}
+\title{Create lazy connections to all tables in a schema as separate variables}
 \usage{
 lazy_conn_all_tables(
   pool_conn,
@@ -24,5 +24,5 @@ lazy_conn_all_tables(
 Variables for lazy connections to each of the tables in the global environment
 }
 \description{
-Create lazy connections to all tables in a schema
+Create lazy connections to all tables in a schema as separate variables
 }

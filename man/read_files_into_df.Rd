@@ -2,7 +2,7 @@
 % Please edit documentation in R/read_files_into_df.R
 \name{read_files_into_df}
 \alias{read_files_into_df}
-\title{Function to read files from a directory and bind them into a single \code{data.frame}}
+\title{Read files from a directory and bind them into a single \code{data.frame}}
 \usage{
 read_files_into_df(file_directory, file_pattern = "*.csv")
 }
@@ -15,5 +15,5 @@ read_files_into_df(file_directory, file_pattern = "*.csv")
 A \code{data.frame} containing rows from the files in the directory.
 }
 \description{
-Function to read files from a directory and bind them into a single \code{data.frame}
+Read files from a directory and bind them into a single \code{data.frame}
 }
