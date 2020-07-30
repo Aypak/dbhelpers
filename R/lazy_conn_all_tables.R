@@ -1,5 +1,5 @@
 #'
-#' Create lazy connections to all tables in a schema
+#' Create lazy connections to all tables in a schema as separate variables
 #'
 #' @param pool_conn A pool connection to a PostgreSQL database
 #' @param schemaname The schema from which to get the tables. Default is public
@@ -28,7 +28,7 @@ lazy_conn_all_tables <- function(pool_conn,schemaname = "public", prefix = "", e
        ~assign(
          envir = env,
          x = paste0(prefix,.),
-         value = create_lazy_conn(pool_conn,schema,.)
+         value = create_lazy_conn(pool_conn,schemaname,.)
          )
        )
 }
