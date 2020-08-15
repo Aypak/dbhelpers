@@ -75,4 +75,3 @@ e.g
 get_last_name("John Bewzani Banda")
 # [1] "Bewzani Banda"
 ```
->>>>>>> e2b93f9a033449342187724581c8460091cca1f1
