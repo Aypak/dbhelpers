@@ -1,6 +1,9 @@
 # dbhelpers
-
 > Helper functions to make working with databases a bit smoother
+
+<!-- badges: start -->
+[![R build status](https://github.com/Aypak/dbhelpers/workflows/R-CMD-check/badge.svg)](https://github.com/Aypak/dbhelpers/actions)
+<!-- badges: end -->
 
 ## Overview
 
