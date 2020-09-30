@@ -18,10 +18,10 @@ lazy_conn_all_tables(
 
 \item{prefix}{String to prefix the variables with}
 
-\item{env}{The environment in which to create the variables. Default is global}
+\item{env}{The environment in which to create the variables. Default is global environment}
 }
 \value{
-Variables for lazy connections to each of the tables in the global environment
+Variables for lazy connections to each of the tables in the environment specified
 }
 \description{
 Create lazy connections to all tables in a schema as separate variables
