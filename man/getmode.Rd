@@ -20,5 +20,4 @@ Get the mode from a vector
 \examples{
 hps <- mtcars$hp
 getmode(hps)
-
 }

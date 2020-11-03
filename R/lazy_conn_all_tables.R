@@ -11,11 +11,11 @@
 #' @export
 #'
 #'
-lazy_conn_all_tables <- function(pool_conn,schemaname = "public", prefix = "", env = globalenv()){
+lazy_conn_all_tables <- function(pool_conn, schemaname = "public", prefix = "", env = globalenv()) {
   # Create vector of the table names using the connection and schema passed in
   table_names <- pool_conn %>%
     # table names are found in the information schema on postgres
-    dplyr::tbl(dbplyr::in_schema("information_schema","tables")) %>%
+    dplyr::tbl(dbplyr::in_schema("information_schema", "tables")) %>%
     # filter out entries of table type BASE TABLE
     dplyr::filter(table_schema == schemaname, table_type == "BASE TABLE") %>%
     # pull out the table name column
@@ -24,9 +24,12 @@ lazy_conn_all_tables <- function(pool_conn,schemaname = "public", prefix = "", e
   # Walk through the vector above and apply the create_lazy_conn method to each table
   # Create variable in the environment specified
   # Add the optional prefix to each variable name
-  purrr::walk(table_names,
-       ~assign(
-         envir = env,
-         x = paste0(prefix,.),
-         value = create_lazy_conn(pool_conn,schemaname,.)))
+  purrr::walk(
+    table_names,
+    ~ assign(
+      envir = env,
+      x = paste0(prefix, .),
+      value = create_lazy_conn(pool_conn, schemaname, .)
+    )
+  )
 }

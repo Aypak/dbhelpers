@@ -45,14 +45,16 @@ Generate a file name for a report
 }
 \examples{
 generate_filename(
-  report_name="monthend",
-  date="06-20",
-  module="numeracy",
-  device_name = "KRP")
+  report_name = "monthend",
+  date = "06-20",
+  module = "numeracy",
+  device_name = "KRP"
+)
 
 generate_filename(
-  report_name="alldata",
-  date="06-20",
-  module="literacy",
-  device_name = "DRY")
+  report_name = "alldata",
+  date = "06-20",
+  module = "literacy",
+  device_name = "DRY"
+)
 }

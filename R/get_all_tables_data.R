@@ -11,11 +11,11 @@
 #' @export
 #'
 #'
-get_all_tables_data <- function(pool_conn,schemaname = "public", prefix = "", env = globalenv()){
+get_all_tables_data <- function(pool_conn, schemaname = "public", prefix = "", env = globalenv()) {
   # Create vector of the table names using the connection and schema passed in
   table_names <- pool_conn %>%
     # table names are found in the information schema on postgres
-    dplyr::tbl(dbplyr::in_schema("information_schema","tables")) %>%
+    dplyr::tbl(dbplyr::in_schema("information_schema", "tables")) %>%
     # filter out entries of table type BASE TABLE
     dplyr::filter(table_schema == schemaname, table_type == "BASE TABLE") %>%
     # pull out the table name column
@@ -24,11 +24,12 @@ get_all_tables_data <- function(pool_conn,schemaname = "public", prefix = "", en
   # Walk through the vector above and apply the get_table_data method to each table
   # Create variable in the environment specified
   # Add the optional prefix to each variable name
-  purrr::walk(table_names,
-              ~assign(
-                envir = env,
-                x = paste0(prefix,.),
-                value = get_table_data(pool_conn,schemaname,.)
-              )
+  purrr::walk(
+    table_names,
+    ~ assign(
+      envir = env,
+      x = paste0(prefix, .),
+      value = get_table_data(pool_conn, schemaname, .)
+    )
   )
 }

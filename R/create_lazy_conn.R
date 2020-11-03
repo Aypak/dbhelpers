@@ -10,7 +10,7 @@
 #'
 #' @import dplyr
 #'
-create_lazy_conn <- function(pool_conn, schemaname = "public", tablename){
+create_lazy_conn <- function(pool_conn, schemaname = "public", tablename) {
   lazy_conn <- pool_conn %>% dplyr::tbl(dbplyr::in_schema(schemaname, tablename))
   return(lazy_conn)
 }

@@ -10,7 +10,7 @@
 #'
 #' @import dplyr
 #'
-get_table_data <- function(pool_conn, schemaname = "public", tablename){
+get_table_data <- function(pool_conn, schemaname = "public", tablename) {
   table_data <- pool_conn %>%
     dplyr::tbl(dbplyr::in_schema(schemaname, tablename)) %>%
     collect()

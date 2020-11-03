@@ -22,30 +22,32 @@
 #'
 #' @examples
 #' generate_filename(
-#'   report_name="monthend",
-#'   date="06-20",
-#'   module="numeracy",
-#'   device_name = "KRP")
+#'   report_name = "monthend",
+#'   date = "06-20",
+#'   module = "numeracy",
+#'   device_name = "KRP"
+#' )
 #'
 #' generate_filename(
-#'   report_name="alldata",
-#'   date="06-20",
-#'   module="literacy",
-#'   device_name = "DRY")
-
-generate_filename <- function(reports_dir="~/.reports/",
+#'   report_name = "alldata",
+#'   date = "06-20",
+#'   module = "literacy",
+#'   device_name = "DRY"
+#' )
+generate_filename <- function(reports_dir = "~/.reports/",
                               report_name,
                               date,
                               module,
-                              extension=".csv",
+                              extension = ".csv",
                               device_name,
-                              separator="_"){
+                              separator = "_") {
   # Generate file name from argumentss above
-  filename <- paste0(reports_dir,report_name) %>%
+  filename <- paste0(reports_dir, report_name) %>%
     paste(device_name,
-          module,
-          date,
-          sep = separator) %>%
+      module,
+      date,
+      sep = separator
+    ) %>%
     # Call paste0 to add the extension
     paste0(extension)
 
