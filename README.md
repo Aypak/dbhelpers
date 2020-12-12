@@ -4,7 +4,6 @@
 
 <!-- badges: start -->
 [![R build status](https://github.com/Aypak/dbhelpers/workflows/R-CMD-check/badge.svg)](https://github.com/Aypak/dbhelpers/actions)
-[![HitCount](http://hits.dwyl.com/Aypak/dbhelpers.svg)](http://hits.dwyl.com/Aypak/dbhelpers)
 <!-- badges: end -->
 
 ## Overview
