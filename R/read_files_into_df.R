@@ -6,7 +6,7 @@
 #' @return A \code{data.frame} containing rows from the files in the directory.
 #' @export
 #'
-read_files_into_df <- function(...,file_directory, file_pattern = "*.csv") {
+read_files_into_df <- function(file_directory, file_pattern = "*.csv",...) {
   # Create a placeholder data frame
   placeholder_df <- data.frame()
 
@@ -20,7 +20,7 @@ read_files_into_df <- function(...,file_directory, file_pattern = "*.csv") {
   # Loop through the list of files
   for (i in 1:length(filenames)) {
     # Read each file and bind it to the placeholder df
-    file <- readr::read_csv(...,file = filenames[i])
+    file <- readr::read_csv(file = filenames[i],...)
     placeholder_df <- placeholder_df %>% plyr::rbind.fill(file)
   }
 
