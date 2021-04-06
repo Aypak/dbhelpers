@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • dbhelpers</title>
+<title>Convert a string to a uuid by inserting hyphens in the right places — str_to_uuid • dbhelpers</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Convert a string to a uuid by inserting hyphens in the right places — str_to_uuid" />
+<meta property="og:description" content="Convert a string to a uuid by inserting hyphens in the right places" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,102 +101,38 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Convert a string to a uuid by inserting hyphens in the right places</h1>
+    
+    <div class="hidden name"><code>str_to_uuid.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Convert a string to a uuid by inserting hyphens in the right places</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>str_to_uuid</span><span class='op'>(</span><span class='va'>input_string</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="create_lazy_conn.html">create_lazy_conn()</a></code> </p>
-        </td>
-        <td><p>Create a lazy connection to a table in a schema</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="generate_filename.html">generate_filename()</a></code> </p>
-        </td>
-        <td><p>Generate a file name for a report</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_all_tables_data.html">get_all_tables_data()</a></code> </p>
-        </td>
-        <td><p>Get data from all tables in a schema. Each as a separate <code>data.frame</code></p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_first_name.html">get_first_name()</a></code> </p>
-        </td>
-        <td><p>Get the first name from a full name</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_last_name.html">get_last_name()</a></code> </p>
-        </td>
-        <td><p>Get the last name from a full name</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_table_data.html">get_table_data()</a></code> </p>
-        </td>
-        <td><p>Get data from a database table as a <code>data.frame</code></p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="getmode.html">getmode()</a></code> </p>
-        </td>
-        <td><p>Get the mode from a vector</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="is.empty.html">is.empty()</a></code> </p>
-        </td>
-        <td><p>Empty Value</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lazy_conn_all_tables.html">lazy_conn_all_tables()</a></code> </p>
-        </td>
-        <td><p>Create lazy connections to all tables in a schema as separate variables</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="read_files_into_df.html">read_files_into_df()</a></code> </p>
-        </td>
-        <td><p>Read files from a directory and bind them into a single <code>data.frame</code></p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="str_to_uuid.html">str_to_uuid()</a></code> </p>
-        </td>
-        <td><p>Convert a string to a uuid by inserting hyphens in the right places</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>input_string</th>
+      <td><p>A 32-character string to convert to a uuid</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A string formatted as a uuid</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>str_to_uuid</span><span class='op'>(</span><span class='st'>"f3f6bf4b9c424b6fbd90bece1418a415"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "f3f6bf4b-9c42-4b6f-bd90-bece1418a415"</div><div class='input'><span class='fu'>str_to_uuid</span><span class='op'>(</span><span class='st'>"3a126f041a9e4127978bb6544a099d0d"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "3a126f04-1a9e-4127-978b-b6544a099d0d"</div><div class='input'>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
