@@ -170,8 +170,8 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>str_to_uuid</span><span class='op'>(</span><span class='st'>"f3f6bf4b9c424b6fbd90bece1418a415"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "f3f6bf4b-9c42-4b6f-bd90-bece1418a415"</div><div class='input'><span class='fu'>str_to_uuid</span><span class='op'>(</span><span class='st'>"3a126f041a9e4127978bb6544a099d0d"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "3a126f04-1a9e-4127-978b-b6544a099d0d"</div><div class='input'>
+</div><div class='output co'>#&gt; <span class='error'>Error in str_c(str_sub(input_string, 1, 8), str_sub(input_string, 9, 12),     str_sub(input_string, 13, 16), str_sub(input_string, 17,         20), str_sub(input_string, 21, 32), sep = "-"): could not find function "str_c"</span></div><div class='input'><span class='fu'>str_to_uuid</span><span class='op'>(</span><span class='st'>"3a126f041a9e4127978bb6544a099d0d"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in str_c(str_sub(input_string, 1, 8), str_sub(input_string, 9, 12),     str_sub(input_string, 13, 16), str_sub(input_string, 17,         20), str_sub(input_string, 21, 32), sep = "-"): could not find function "str_c"</span></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
