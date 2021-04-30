@@ -17,7 +17,8 @@ Imports:
     magrittr,
     rlang,
     readr,
-    plyr
+    plyr,
+    data.table
 RoxygenNote: 7.1.1
 Suggests:
     RPostgreSQL,
