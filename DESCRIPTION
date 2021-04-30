@@ -18,7 +18,8 @@ Imports:
     rlang,
     readr,
     plyr,
-    data.table
+    data.table,
+    stringr
 RoxygenNote: 7.1.1
 Suggests:
     RPostgreSQL,

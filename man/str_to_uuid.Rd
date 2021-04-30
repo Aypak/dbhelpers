@@ -18,5 +18,4 @@ Convert a string to a uuid by inserting hyphens in the right places
 \examples{
 str_to_uuid("f3f6bf4b9c424b6fbd90bece1418a415")
 str_to_uuid("3a126f041a9e4127978bb6544a099d0d")
-
 }

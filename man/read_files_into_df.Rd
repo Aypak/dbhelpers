@@ -11,7 +11,7 @@ read_files_into_df(file_directory, file_pattern = "*.csv", ...)
 
 \item{file_pattern}{Regular expression to match the file names on. Default is "*.csv"}
 
-\item{...}{Arbitrary args passed to readr}
+\item{...}{Arbitrary args passed to \code{fread}}
 }
 \value{
 A \code{data.frame} containing rows from the files in the directory.
