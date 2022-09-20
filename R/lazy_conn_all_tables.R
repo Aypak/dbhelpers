@@ -5,19 +5,20 @@
 #' @param schemaname The schema from which to get the tables. Default is public
 #' @param prefix String to prefix the variables with
 #' @param env The environment in which to create the variables. Default is global environment
+#' @param table_types The types of tables to connect to. Default is base tables, foreign tables, views and local temporary tables
 #'
 #' @return Variables for lazy connections to each of the tables in the environment specified
 #'
 #' @export
 #'
 #'
-lazy_conn_all_tables <- function(pool_conn, schemaname = "public", prefix = "", env = globalenv()) {
+lazy_conn_all_tables <- function(pool_conn, schemaname = "public", table_types = c("BASE TABLE", "FOREIGN", "VIEW", "LOCAL TEMPORARY"), prefix = "", env = globalenv()) {
   # Create vector of the table names using the connection and schema passed in
   table_names <- pool_conn %>%
     # table names are found in the information schema on postgres
     dplyr::tbl(dbplyr::in_schema("information_schema", "tables")) %>%
     # filter out entries of table type BASE TABLE
-    dplyr::filter(table_schema == schemaname, table_type == "BASE TABLE") %>%
+    dplyr::filter(table_schema == schemaname, table_type %in% table_types) %>%
     # pull out the table name column
     dplyr::pull(table_name)
 
