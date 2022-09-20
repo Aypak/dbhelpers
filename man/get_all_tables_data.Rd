@@ -8,6 +8,7 @@ get_all_tables_data(
   pool_conn,
   schemaname = "public",
   prefix = "",
+  table_types = c("BASE TABLE", "FOREIGN", "VIEW", "LOCAL TEMPORARY"),
   env = globalenv()
 )
 }
@@ -17,6 +18,8 @@ get_all_tables_data(
 \item{schemaname}{The schema from which to get the tables. Default is public}
 
 \item{prefix}{String to prefix the variables with}
+
+\item{table_types}{The types of tables to connect to. Default is base tables, foreign tables, views and local temporary tables}
 
 \item{env}{The environment in which to create the variables. Default is global environment}
 }

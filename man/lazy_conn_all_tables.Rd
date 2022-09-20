@@ -7,6 +7,7 @@
 lazy_conn_all_tables(
   pool_conn,
   schemaname = "public",
+  table_types = c("BASE TABLE", "FOREIGN", "VIEW", "LOCAL TEMPORARY"),
   prefix = "",
   env = globalenv()
 )
@@ -15,6 +16,8 @@ lazy_conn_all_tables(
 \item{pool_conn}{A pool connection to a PostgreSQL database}
 
 \item{schemaname}{The schema from which to get the tables. Default is public}
+
+\item{table_types}{The types of tables to connect to. Default is base tables, foreign tables, views and local temporary tables}
 
 \item{prefix}{String to prefix the variables with}
 
