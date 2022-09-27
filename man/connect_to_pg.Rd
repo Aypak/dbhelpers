@@ -18,6 +18,8 @@ connect_to_pg(
 \item{config_value}{The set of config vars to use from the config file}
 
 \item{envars_prefix}{The prefix of the environment variables to use to connect}
+
+\item{...}{Arguments passed to config::get}
 }
 \value{
 A database connection object
