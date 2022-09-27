@@ -4,6 +4,7 @@
 #' @param config_file A yml config file with database credentials. Default is \code{config.yml} in root of project
 #' @param config_value The set of config vars to use from the config file
 #' @param envars_prefix The prefix of the environment variables to use to connect
+#' @param ... Arguments passed to config::get
 #'
 #' @return A database connection object
 #' @export
