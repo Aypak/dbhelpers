@@ -1,7 +1,7 @@
 Package: dbhelpers
 Type: Package
 Title: Helper Functions for Common Database Operations
-Version: 0.1.1
+Version: 0.1.2
 Authors@R:
     person("Kapya", "Sakala", email = "kapsakala@gmail.com", role = c("aut", "cre"))
 Description: Helper functions to assist with data extraction and processing.
@@ -21,7 +21,7 @@ Imports:
     data.table,
     stringr,
     RPostgres
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Suggests:
     RPostgreSQL,
     testthat

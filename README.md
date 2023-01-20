@@ -22,6 +22,7 @@ devtools::install_github("Aypak/dbhelpers")
 ```
 
 ## Functions available :
+- [connect_to_pg](#connect_to_pg)
 - [read_files_into_df](#read_files_into_df)
 - [create_lazy_conn](#create_lazy_conn)
 - [lazy_conn_all_tables](#lazy_conn_all_tables)
