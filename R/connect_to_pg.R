@@ -11,7 +11,6 @@
 #'
 connect_to_pg <- function(config_file = here::here("config.yml"), config_value = "default", envars_prefix = "DEFAULT_DATABASE_", ...) {
   if (file.exists(config_file)) {
-
     # fetch config vars from file
     config_vars <- config::get(value = config_value, file = config_file, ...)
     db_name <- config_vars$database
