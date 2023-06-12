@@ -34,13 +34,13 @@
 #'   module = "literacy",
 #'   device_name = "DRY"
 #' )
-generate_filename <- function(reports_dir = "~/.reports/",
-                              report_name,
-                              date,
-                              module,
-                              extension = ".csv",
-                              device_name,
-                              separator = "_") {
+generate_filename <- Vectorize(function(reports_dir = "~/.reports/",
+                                        report_name,
+                                        date,
+                                        module,
+                                        extension = ".csv",
+                                        device_name,
+                                        separator = "_") {
   # Generate file name from argumentss above
   filename <- paste0(reports_dir, report_name) %>%
     paste(device_name,
@@ -53,4 +53,4 @@ generate_filename <- function(reports_dir = "~/.reports/",
 
   # Return the final file name
   return(filename)
-}
+})
