@@ -14,10 +14,11 @@ str_to_uuid <- Vectorize(function(input_string) {
   }
 
   uuid_string <- paste(stringr::str_sub(input_string, 1, 8),
-                       stringr::str_sub(input_string, 9, 12),
-                       stringr::str_sub(input_string, 13, 16),
-                       stringr::str_sub(input_string, 17, 20),
-                       stringr::str_sub(input_string, 21, 32),
-                       sep = "-")
+    stringr::str_sub(input_string, 9, 12),
+    stringr::str_sub(input_string, 13, 16),
+    stringr::str_sub(input_string, 17, 20),
+    stringr::str_sub(input_string, 21, 32),
+    sep = "-"
+  )
   return(uuid_string)
 })
