@@ -4,12 +4,22 @@
 \alias{read_files_into_df}
 \title{Read files from a directory and bind them into a single \code{data.frame}}
 \usage{
-read_files_into_df(file_directory, file_pattern = "*.csv", ...)
+read_files_into_df(
+  file_directory,
+  file_pattern = rebus::or("*.csv", "*.xlsx", "*.xls"),
+  files_recursive = FALSE,
+  clean_names = FALSE,
+  ...
+)
 }
 \arguments{
-\item{file_directory}{Name or path to the directory containing files of interest}
+\item{file_directory}{Path to the directory containing files of interest}
 
-\item{file_pattern}{Regular expression to match the file names on. Default is "*.csv"}
+\item{file_pattern}{File pattern or regular expression to match the file names on. Supported file types are csv, xlsx, and xls}
+
+\item{files_recursive}{Boolean. Search for files recursively in the current directory or not. Default is FALSE}
+
+\item{clean_names}{Boolean. Use \code{janitor::clean_names()} on the data as it is being read. Default is FALSE}
 
 \item{...}{Arbitrary args passed to \code{fread}}
 }
