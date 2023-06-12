@@ -20,6 +20,8 @@ Imports:
     plyr,
     data.table,
     stringr,
+    janitor,
+    readxl,
     RPostgres
 RoxygenNote: 7.2.3
 Suggests:
